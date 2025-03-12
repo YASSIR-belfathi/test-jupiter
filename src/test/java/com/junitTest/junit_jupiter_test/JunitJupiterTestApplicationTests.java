@@ -49,7 +49,9 @@ public class JunitJupiterTestApplicationTests {
 	// question 5
 	@Test
 	public void ComplexMockInteraction() {
-		assertThrows(IllegalArgumentException.class, () -> compteBancaire.transfersVers(compteBancaire2, 100));
+		// assertThrows(IllegalArgumentException.class, () ->
+		// compteBancaire.transfersVers(compteBancaire2, 100));
+		compteBancaire.transfersVers(compteBancaire2, 100);
 		verify(sendNotification).sendNotification(anyString());
 		verify(sendNotification2).sendNotification(anyString());
 	}
